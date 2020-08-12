@@ -24,7 +24,8 @@ app.get('/svc', function(request, response) {
     response.send(JSON.parse(JSON.stringify(outputResult)));
     
 });
-app.get('/internal-api', function(request, response) {
+
+app.get('/other', function(request, response) {
     var nameString = request.query.name;
     var historyString = request.query.history;
     
