@@ -31,41 +31,41 @@ app.get('/customerSearch', function(request, response) {
     response.setHeader('Access-Control-Allow-Origin','*');
     response.send(JSON.parse(JSON.stringify(outputResult)));
     
-});
+ });
 
-app.get('/svc', function(request, response) {
-    var nameString = request.query.name;
-    var historyString = request.query.history;
+// app.get('/svc', function(request, response) {
+//     var nameString = request.query.name;
+//     var historyString = request.query.history;
     
-    var jsonContent = [{}];
+//     var jsonContent = [{}];
     
-    var outputResult = jsonContent;
-    const limit = request.query.limit;
-    if(limit && limit <= jsonContent.length){
-        outputResult = outputResult.slice(0, limit);
-    }
+//     var outputResult = jsonContent;
+//     const limit = request.query.limit;
+//     if(limit && limit <= jsonContent.length){
+//         outputResult = outputResult.slice(0, limit);
+//     }
     
-    response.setHeader('Access-Control-Allow-Origin','*');
-    response.send(JSON.parse(JSON.stringify(outputResult)));
+//     response.setHeader('Access-Control-Allow-Origin','*');
+//     response.send(JSON.parse(JSON.stringify(outputResult)));
     
-});
+// });
 
-app.get('/other', function(request, response) {
-    var nameString = request.query.name;
-    var historyString = request.query.history;
+// app.get('/other', function(request, response) {
+//     var nameString = request.query.name;
+//     var historyString = request.query.history;
     
-    var jsonContent = [{}];
+//     var jsonContent = [{}];
     
-    var outputResult = jsonContent;
-    const limit = request.query.limit;
-    if(limit && limit <= jsonContent.length){
-        outputResult = outputResult.slice(0, limit);
-    }
+//     var outputResult = jsonContent;
+//     const limit = request.query.limit;
+//     if(limit && limit <= jsonContent.length){
+//         outputResult = outputResult.slice(0, limit);
+//     }
     
-    response.setHeader('Access-Control-Allow-Origin','*');
-    response.send(JSON.parse(JSON.stringify(outputResult)));
+//     response.setHeader('Access-Control-Allow-Origin','*');
+//     response.send(JSON.parse(JSON.stringify(outputResult)));
     
-});
+// });
 
 app.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
