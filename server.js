@@ -9,7 +9,22 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 app.get('/customerSearch', function(request, response) {
-    var jsonContent = [{}];
+    var jsonContent = [
+    {
+        "system": "SVC",
+        "docIdType": "HKID",
+        "docIdNo": "A123456(7)",
+        "name": "Chan, Tai Man",
+        "serviceStatus": "Active"
+    }, 
+    {
+        "system": "Ruby",
+        "docIdType": "HKID",
+        "docIdNo": "A123456(7)",
+        "name": "Chan, Tai Man",
+        "serviceStatus": "Active"
+    }
+];
     
     var outputResult = jsonContent;
     
