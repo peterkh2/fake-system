@@ -17,16 +17,14 @@ app.get('/customerSearch', function(request, response) {
             "docIdType": "HKID",
             "docIdNo": 'A123456(7)",
             "name": "Chan, Tai Man",
-            "serviceStatus": "Active",
-            "searchKey": custSearchKey,
+            "serviceStatus": "Active"
         }, 
         {
             "system": "Ruby",
             "docIdType": "HKID",
             "docIdNo": 'A123456(7)",
             "name": "Chan, Tai Man",
-            "serviceStatus": "Active",
-            "searchKey": custSearchKey,
+            "serviceStatus": "Active"
         }
     ];
     
