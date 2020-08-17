@@ -9,10 +9,26 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 app.get('/customerSearch', function(request, response) {
-    var nameString = request.query.name;
-    var historyString = request.query.history;
+    var custSearchKey = request.query.custSearchKey;
     
-    var jsonContent = [{}];
+    var jsonContent = [
+        {
+            "system": "SVC",
+            "docIdType": "HKID",
+            "docIdNo": 'A123456(7)",
+            "name": "Chan, Tai Man",
+            "serviceStatus": "Active",
+            "searchKey": custSearchKey,
+        }, 
+        {
+            "system": "Ruby",
+            "docIdType": "HKID",
+            "docIdNo": 'A123456(7)",
+            "name": "Chan, Tai Man",
+            "serviceStatus": "Active",
+            "searchKey": custSearchKey,
+        }
+    ];
     
     var outputResult = jsonContent;
     const limit = request.query.limit;
