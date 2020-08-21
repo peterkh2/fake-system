@@ -10,9 +10,6 @@ app.use(bodyParser.json());
 
 app.get('/customerSearch', function(request, response) {
     
-    setTimeout(() => {
-  alert('Hello');
-});
     var jsonContent = [
     {
         "system": "SVC",
