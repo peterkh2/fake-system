@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 app.get('/customerSearch', function(request, response) {
     
-    setTimeout(function(){console.log("fake delay for show loading");}, 5000);
+    
     var jsonContent = [
     {
         "system": "SVC",
@@ -30,8 +30,10 @@ app.get('/customerSearch', function(request, response) {
     
     var outputResult = jsonContent;
     
-    response.setHeader('Access-Control-Allow-Origin','*');
-    response.send(JSON.parse(JSON.stringify(outputResult)));
+    setTimeout(function(){
+        response.setHeader('Access-Control-Allow-Origin','*');
+        response.send(JSON.parse(JSON.stringify(outputResult)));
+    }, 5000);
     
  });
 
