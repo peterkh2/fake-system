@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 app.get('/customerSearch', function(request, response) {
     
-    setTimeout(function(){ }, 3000);
+    setTimeout(function(){console.log("fake delay for show loading");}, 3000);
     var jsonContent = [
     {
         "system": "SVC",
