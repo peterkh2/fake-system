@@ -33,7 +33,7 @@ app.get('/customerSearch', function(request, response) {
     setTimeout(function(){
         response.setHeader('Access-Control-Allow-Origin','*');
         response.send(JSON.parse(JSON.stringify(outputResult)));
-    }, 5000);
+    }, 3000);
     
  });
 
